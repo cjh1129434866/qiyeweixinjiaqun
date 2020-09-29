@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <script>
+    //这段代码放在head标签里面
+    (function () {
+      var html = document.documentElement;
+      function onWindowResize() {
+          html.style.fontSize = html.getBoundingClientRect().width / 3.75 + 'px';
+      }
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/basic.css">
+  <title>海报</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+
+    <div class="haibao">这是海报</div>
+  </div>
+</body>
+</html>
