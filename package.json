@@ -1,0 +1,24 @@
+{
+  "name": "qiyeweixinjiaqun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "live-server ./ --port=8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjh1129434866/qiyeweixinjiaqun.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjh1129434866/qiyeweixinjiaqun/issues"
+  },
+  "homepage": "https://github.com/cjh1129434866/qiyeweixinjiaqun#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

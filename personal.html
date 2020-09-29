@@ -22,67 +22,40 @@
   <title>海报</title>
   <style>
     #root .main{
-      padding-top: 0.2rem;
       width: 100%;
       height: 100%;
-      background: #EBFAFF;
+      background: #fff;
     }
-    #root .main .poster{
-      margin: 0 auto 0.2rem;
-      width: 3rem;
-      height: 4.5rem;
-      border-radius: .1rem;
-      border: .04rem solid #fff;
-    }
-    #root .main .poster .poster_img{
-      width: 100%;
-      height: 100%;
-      border-radius: .1rem;
-    }
-    #root .main .btn_wrapper{
-      margin: 0 auto;
-      width: 2rem;
-      padding: .03rem;
-      text-align: center;
-      font-size: .26rem;
-      color: #fff;
-      background: linear-gradient(to right, #3fc7ff, #3687ff);
-      box-shadow: 0 0 0.7 .2rem rgba(46, 129, 217, .15);
-      border-radius: .4rem;
-    }
+    
   </style>
 </head>
 <body>
   <div id="root">
     <!-- header -->
     <header id="header" class="header">
-      <span>海报</span>
+      <span>个人中心</span>
     </header>
     <!-- main -->
     <div class="main">
-      <div class="poster">
-        <img class="poster_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2569851901,1903631329&fm=26&gp=0.jpg" alt="">
-      </div>
-      <div class="btn_wrapper">
-        生成海报
-      </div>
+      
     </div>
     <!-- footer -->
     <footer id="footer" class="footer">
-      <div class="footer_item footer_item_poster active">
+      <div class="footer_item footer_item_poster">
         <i class="iconfont icon-shengchenghaibao"></i>
         <span class="text">海报</span>
       </div>
-      <div class="footer_item footer_item_ranking ">
+      <div class="footer_item footer_item_ranking">
         <i class="iconfont icon-paihangbang"></i>
         <span class="text">排行榜</span>
       </div>
-      <div class="footer_item footer_item_personal">
+      <div class="footer_item footer_item_personal active">
         <i class="iconfont icon-gerenzhongxin"></i>
         <span class="text">个人中心</span>
       </div>
     </footer>
   </div>
+
   <script>
     let footerItemPoster = document.getElementsByClassName('footer_item_poster')[0],
         footerItemRanking = document.getElementsByClassName('footer_item_ranking')[0],

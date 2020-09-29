@@ -13,6 +13,7 @@ body {
 }
 
 #root {
+  padding-bottom: .6rem;
 	height: 100%;
 	margin: 0 auto;
 	max-width: 750px;
