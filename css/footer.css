@@ -9,6 +9,7 @@
   height: 0.6rem;
   background: #fff;
   border-top: .01rem solid #EDF0F1;
+  z-index: 999999;
 }
 
 #footer .footer_item{
