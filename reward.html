@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <script>
+    //这段代码放在head标签里面
+    (function () {
+      var html = document.documentElement;
+      function onWindowResize() {
+          html.style.fontSize = html.getBoundingClientRect().width / 3.75 + 'px';
+      }
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/basic.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <title>奖励</title>
+  <style>
+    #root .main {
+      padding-top: .2rem;
+    }
+    #root .main .reward_list{
+      margin: 0 auto;
+      width: 3.4rem;
+
+    }
+    #root .main .reward_list .reward_list_item{
+      display: flex;
+      justify-content: space-between;
+      padding: .1rem;
+      margin-bottom: .1rem;
+      border-radius: .1rem;;
+      box-shadow: 0 0 .05rem .01rem rgba(46,129,217, .15);
+    }
+    #root .main .reward_list .reward_list_item .left{
+      margin-right: .1rem;
+      width: .5rem;
+      height: .5rem;
+    }
+    #root .main .reward_list .reward_list_item .left img{
+      width: 100%;
+      height: 100%;
+    }
+    #root .main .reward_list .reward_list_item .right {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - .6rem);
+    }
+    #root .main .reward_list .reward_list_item .title{
+      font-size: .20rem;
+      color: #666;
+    }
+    #root .main .reward_list .reward_list_item .sub_title{
+      font-size: .16rem;
+      color: #999;
+    }
+    #root .main .reward_list .reward_list_item .btn{
+      display: flex;
+    }
+    #root .main .reward_list .reward_list_item .btn .btn_span{
+      margin: auto;
+      padding: .05rem .2rem;
+      border: .01rem solid #3687FF;
+      border-radius: .5rem;
+      color: #3687FF;
+    }
+    #popup {
+      display: flex;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .7);
+      z-index: -1;
+      opacity: 0;
+      transition: all .3s;
+    }
+    #popup .area {
+      margin: auto;
+      width: 3rem;
+      height: 5rem;
+      background: #FAFAFA;
+      border-radius: .1rem;;
+    }
+    #popup .area .top{
+      position: relative;
+      width: 100%;
+      height: 1.8rem;
+      border-radius: .1rem .1rem 0 0;
+      background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601463715751&di=954a114700fa726684b4231098a20e54&imgtype=0&src=http%3A%2F%2F2a.zol-img.com.cn%2Fproduct%2F60%2F2%2FceuDUebGIViDQ.jpg') center center/100% 100% no-repeat;
+    }
+    #popup .area .top .top_title{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 30%;
+      color: #fff;
+      font-size: .3rem;
+      text-align: center;
+    }
+    #popup .area .middle{
+      position: relative;
+      margin: -.4rem auto 0;
+      padding-top: .01rem;
+      width: 2.4rem;
+      height: 2.6rem;
+      background: #fff;
+      box-shadow: 0 0 .05rem .01rem #F0F0F0;
+      border-radius: .1rem;
+      z-index: 99;
+    }
+    #popup .area .middle .icon{
+      display: flex;
+      margin: -.25rem auto 0;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 .05rem .1rem .05rem rgba(46,129,217, .15);
+      background: #fff;
+    }
+    #popup .area .middle .icon .iconfont{
+      margin: auto;
+      font-size: .4rem;
+      color: #3687FF;
+    }
+    #popup .area .middle .operate{
+      margin-top: .4rem;
+      text-align: center;
+    }
+    #popup .area .middle .operate .operate_title{
+      margin-bottom: .2rem;
+      color: #AAAAAA;
+      font-size: .16rem;
+      font-weight: 400;
+    }
+    #popup .area .middle .operate .operate_inp{
+      width: 2rem;
+      height: .4rem;
+      background: #F0F5FD;
+      border-radius: .3rem;
+      border: none;
+      outline: none;
+      text-indent: .2rem;
+    }
+    #popup .area .bottom{
+      display: flex;
+      justify-content: space-around;
+      margin-top: .2rem;
+      width: 100%;
+      text-align: center;
+    }
+    #popup .area .bottom .btn{
+      width: 1.2rem;
+      height: .4rem;
+      line-height: .4rem;
+      border-radius: .3rem;
+      font-size: .16rem;
+    }
+    #popup .area .bottom .btn.confirm{
+      background: linear-gradient(to right, #3fc7ff, #3687ff);
+      color: #fff;
+    }
+    #popup .area .bottom .btn.cancel{
+      border: .01rem solid #67A4FF;
+      color: #67A4FF;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- header -->
+    <header id="header" class="header">
+      <div class="header_back"><i class="iconfont icon-jiantouarrowhead7"></i><span class="header_back_text">返回</span></div>
+      <span>奖励</span>
+    </header>
+    <!-- main -->
+    <div class="main">
+      <div class="reward_list">
+        <div class="reward_list_item">
+          <div class="left">
+            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt="">
+          </div>
+          <div class="right">
+            <div class="cont">
+              <div class="title">网红抱枕</div>
+              <div class="sub_title">京东参考价38元</div>
+            </div>
+            <div class="btn">
+              <span index="0" class="btn_span verifyBtn">核销</span>
+            </div>
+          </div>
+        </div>
+        <div class="reward_list_item">
+          <div class="left">
+            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt="">
+          </div>
+          <div class="right">
+            <div class="cont">
+              <div class="title">高档毛巾</div>
+              <div class="sub_title">京东参考价58元</div>
+            </div>
+            <div class="btn">
+              <span index="1" class="btn_span verifyBtn">核销</span>
+            </div>
+          </div>
+        </div>
+        <div class="reward_list_item">
+          <div class="left">
+            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt="">
+          </div>
+          <div class="right">
+            <div class="cont">
+              <div class="title">网红破壁机</div>
+              <div class="sub_title">京东参考价288元</div>
+            </div>
+            <div class="btn">
+              <span index="2" class="btn_span verifyBtn">核销</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="popup">
+      <div class="area">
+        <div class="top">
+          <span class="top_title">请输入核销码</span>
+        </div>
+        <div class="middle">
+          <div class="icon">
+            <i class="iconfont icon-pan_icon"></i>
+          </div>
+          <div class="operate">
+            <h4 class="operate_title">核销码输入后,将无法撤回</h4>
+            <div class=''>
+              <input class="operate_inp" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn confirm">确认核销</div>
+          <div id="cancelPopup" class="btn cancel">取消</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let headerBack = document.getElementsByClassName('header_back')[0],
+        cancelPopup = document.getElementById('cancelPopup'),
+        popup = document.getElementById('popup'),
+        verifyBtnArr = document.getElementsByClassName('verifyBtn'),
+        rewardList = document.getElementsByClassName('reward_list')[0];
+
+    headerBack.onclick = function () {
+      history.go(-1)
+    };
+
+    cancelPopup.onclick = function () {
+      popup.style.opacity = 0;
+      popup.style.zIndex = -1;
+    }
+
+    rewardList.onclick = function (ev) {
+      console.log(ev.target)
+      console.log(ev.target.getAttribute('index'))
+      popup.style.opacity = 1;
+      popup.style.zIndex = 99;
+    }
+  </script>
+</body>
+</html>

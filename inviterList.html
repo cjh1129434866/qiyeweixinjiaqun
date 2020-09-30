@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <script>
+    //这段代码放在head标签里面
+    (function () {
+      var html = document.documentElement;
+      function onWindowResize() {
+          html.style.fontSize = html.getBoundingClientRect().width / 3.75 + 'px';
+      }
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/basic.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <title>邀请人列表</title>
+  <style>
+    #root .main {
+      padding-top: .2rem;
+    }
+    #root .main .inviter_list {
+      margin: 0 auto;
+      width: 3.4rem;
+    }
+    #root .main .inviter_list .inviter_list_item{
+      display: flex;
+      padding: .1rem;
+      margin-bottom: .1rem;
+      box-shadow: 0 0 .05rem .01rem rgba(46,129,217, .15);
+      border-radius: .1rem;
+    }
+    #root .main .inviter_list .avatar {
+      margin-right: .1rem;
+      width: .5rem;
+      height: .5rem;
+    }
+    #root .main .inviter_list .avatar img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    #root .main .inviter_list .info .title{
+      font-size: .2rem;
+      color: #666;
+    }
+    #root .main .inviter_list .info .time{
+      font-size: .16rem;;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- header -->
+    <header id="header" class="header">
+      <div class="header_back"><i class="iconfont icon-jiantouarrowhead7"></i><span class="header_back_text">返回</span></div>
+      <span>邀请人列表</span>
+    </header>
+    <!-- main -->
+    <div class="main">
+      <div class="inviter_list">
+        <div class="inviter_list_item">
+          <div class="avatar"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt=""></div>
+          <div class="info">
+            <div class="title">用户昵称</div>
+            <div class="time">2020年9月16号 15:05</div>
+          </div>
+        </div>
+        <div class="inviter_list_item">
+          <div class="avatar"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt=""></div>
+          <div class="info">
+            <div class="title">用户昵称</div>
+            <div class="time">2020年9月16号 15:05</div>
+          </div>
+        </div>
+        <div class="inviter_list_item">
+          <div class="avatar"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt=""></div>
+          <div class="info">
+            <div class="title">用户昵称</div>
+            <div class="time">2020年9月16号 15:05</div>
+          </div>
+        </div>
+        <div class="inviter_list_item">
+          <div class="avatar"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1671477107,4140431974&fm=26&gp=0.jpg" alt=""></div>
+          <div class="info">
+            <div class="title">用户昵称</div>
+            <div class="time">2020年9月16号 15:05</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+  </div>
+
+  <script>
+    let headerBack = document.getElementsByClassName('header_back')[0];
+    headerBack.onclick = function () {
+      history.go(-1)
+    };
+  </script>
+</body>
+</html>
