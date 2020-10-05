@@ -22,8 +22,10 @@
   <title>排行榜</title>
   <style>
     #root .main{
+      padding-bottom: .8rem;
       width: 100%;
       height: 100%;
+      overflow-y: scroll;
       background: #fff;
     }
     #root .main .img_wrapper{
@@ -37,20 +39,19 @@
     }
     #root .main .list{
       position: relative;
-      margin: -0.6rem auto 0;
+      margin: -0.2rem auto 0;
       padding: .1rem;
       width: 3.4rem;
-      height: 4.2rem;
       border-radius: .1rem;
       box-shadow: 0 0 .7rem .1rem #F2F7FD;
       background: #fff;
-      z-index: 999;
+      z-index: 9;
     }
     #root .main .list .list_header{
       display: flex;
       justify-content: space-around;
       line-height: .4rem;
-      font-size: .2rem;
+      font-size: .18rem;
       text-align: center;
       color: #222;
     }
@@ -71,7 +72,7 @@
       justify-content: space-around;
       padding: .1rem 0;
       line-height: .4rem;
-      font-size: .2rem;
+      font-size: .16rem;
       text-align: center;
       color: #222;
     }
@@ -79,7 +80,6 @@
     #root .main .list .list_cont .medal .medal_img{
       width: .3rem;
       height: .3rem;
-      border-radius: 50%;
       vertical-align: middle;
     }
     #root .main .list .list_cont .userInfo {
@@ -105,7 +105,7 @@
     <!-- main -->
     <div class="main">
       <div class="img_wrapper">
-        <img class="img" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1614144215,2017914613&fm=26&gp=0.jpg" alt="">
+        <img class="img" src="./images/phb_top_bg_img.png" alt="">
       </div>
       <div class="list">
         <div class="list_header">
@@ -115,7 +115,7 @@
         </div>
         <div class="list_cont">
           <div class="medal list_cont_1">
-            <img class="medal_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
+            <img class="medal_img" src="./images/icon_pm_gold.png" alt="">
           </div>
           <div class="userInfo list_cont_2">
             <img class="user_avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
@@ -127,7 +127,7 @@
         </div>
         <div class="list_cont">
           <div class="medal list_cont_1">
-            <img class="medal_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
+            <img class="medal_img" src="./images/icon_pm_silver.png" alt="">
           </div>
           <div class="userInfo list_cont_2">
             <img class="user_avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
@@ -139,7 +139,7 @@
         </div>
         <div class="list_cont">
           <div class="medal list_cont_1">
-            <img class="medal_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
+            <img class="medal_img" src="./images/icon_pm_copper.png" alt="">
           </div>
           <div class="userInfo list_cont_2">
             <img class="user_avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
@@ -164,6 +164,18 @@
         <div class="list_cont">
           <div class="num list_cont_1">
             5
+          </div>
+          <div class="userInfo list_cont_2">
+            <img class="user_avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">
+            <span>用户昵称</span>
+          </div>
+          <div class="invite_number list_cont_3">
+            157
+          </div>
+        </div>
+        <div class="list_cont">
+          <div class="num list_cont_1">
+            6
           </div>
           <div class="userInfo list_cont_2">
             <img class="user_avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601437371421&di=c7050259e5ba00c155f3ece6ed4e0af9&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn19%2F0%2Fw400h400%2F20180910%2F3391-hiycyfw5413589.jpg" alt="">

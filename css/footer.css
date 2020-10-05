@@ -9,6 +9,7 @@
   height: 0.6rem;
   background: #fff;
   border-top: .01rem solid #EDF0F1;
+  z-index: 999999;
 }
 
 #footer .footer_item{
@@ -17,7 +18,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  font-size: .16rem;
+  font-size: .14rem;
   color: #999;
 }
 #footer .footer_item.active{

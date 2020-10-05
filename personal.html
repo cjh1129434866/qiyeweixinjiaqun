@@ -21,22 +21,24 @@
   <link rel="stylesheet" href="./css/footer.css">
   <title>海报</title>
   <style>
+    #root {
+      background: #fff;
+    }
     #root .main{
       padding-bottom: .8rem;
       width: 100%;
       overflow-y: scroll;
-      background: #fff;
     }
     #root .main .main_header{
       position: relative;
       width: 100%;
       height: 2rem;
-      background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601440027129&di=d6127041745fe197f69eebc4bb99c58e&imgtype=0&src=http%3A%2F%2Fdl.ppt123.net%2Fpptbj%2F51%2F20181115%2F4oxilckkpbr.jpg') center center/100% 100% no-repeat;
+      background: url('./images/home_bg_img.png') center center/100% 100% no-repeat;
     }
     #root .main .main_header .main_header_avatar{
       position: absolute;
       left: 50%;
-      top: .6rem;
+      top: .7rem;
       width: .8rem;
       height: .8rem;
       transform: translate(-50%, -50%);
@@ -49,19 +51,19 @@
     #root .main .main_header .main_header_name{
       position: absolute;
       left: 0;
-      top: 1.1rem;
+      top: 1.2rem;
       width: 100%;
       text-align: center;
       color: #fff;
-      font-size: .36rem;
+      font-size: .26rem;
     }
     #root .main .statistics{
       position: relative;
       display: flex;
       padding: .2rem;
-      margin: -.3rem auto .2rem;
+      margin: -.4rem auto .16rem;
       width: 3.4rem;
-      height: 1.2rem;;
+      height: 1rem;;
       border-radius: .1rem;
       text-align: center;
       background: #fff;
@@ -73,24 +75,25 @@
       top: .2rem;
       left: 50%;
       content: '';
-      width: .02rem;
-      height: .8rem;
+      width: .01rem;
+      height: .6rem;
       background: #D6EAFF;
     }
     #root .main .statistics_item{
       flex: 1;
     }
     #root .main .statistics_item .statistics_item_val{
-      font-size: .38rem;
+      font-size: .26rem;
       color: #3687ff;
     }
     #root .main .statistics_item .statistics_item_title{
-      font-size: .2rem;
+      font-size: .16rem;
       color: #222;
     }
     #root .main .list{
-      padding: .2rem;
-      margin: .2rem auto 0;
+      padding-left: .14rem;
+      padding-right: .14rem;
+      margin: .1rem auto 0;
       width: 3.4rem;
       border-radius: .1rem;
       background: #fff;
@@ -99,31 +102,31 @@
     #root .main .list .list_item {
       display: flex;
       padding-top: .1rem;
-      line-height: .4rem;
+      line-height: .3rem;
     }
     #root .main .list .list_item .list_item_icon{
       padding-right: .1rem;
       width: .4rem;
     }
     #root .main .list .list_item .list_item_icon .iconfont{
-      font-size: .24rem;
+      font-size: .2rem;
     }
     #root .main .list .list_item .list_item_cont{
       display: flex;
       justify-content: space-between;
       width: 100%;
-      font-size: .26rem;
+      font-size: .22rem;
     }
     #root .main .list .list_item .list_item_div_border {
       border-bottom: .01rem solid #F1F1F1;
     }
     #root .main .list .list_item .list_item_cont .title{
-      font-size: .2rem;
+      font-size: .16rem;
       color: #222;
     }
     #root .main .list .list_item .list_item_cont .iconfont{
       color: #9D9D9D;
-      font-size: .26rem;
+      font-size: .22rem;
     }
   </style>
 </head>
@@ -176,7 +179,7 @@
         </div>
         <div class="list_item">
           <div class="list_item_icon"><i class="iconfont icon-guize" style="color: #FF8B36; font-size: .3rem;"></i></div>
-          <div class="list_item_cont list_item_div_border">
+          <div class="list_item_cont">
             <span class="title">规则</span>
             <i class="iconfont icon-jiantou"></i>
           </div>
